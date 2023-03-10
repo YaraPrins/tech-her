@@ -1,7 +1,12 @@
 const express = require('express');
 const app = express();
 const expbs = require('express-handlebars');
+//setting up & configure the .env module and file
+const dotenv = require('dotenv').config();
 const port = process.env.PORT || 8080;
+
+//testing connection to the .env file
+console.log(process.env.TEST);
 
 
 //default settings | setting up handlebars
