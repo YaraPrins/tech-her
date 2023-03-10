@@ -1,0 +1,248 @@
+/* 
+    ====================================
+    ========= FONT POPPINS =============
+    ====================================
+*/
+/* 
+    ====================
+          regular
+    ====================
+*/
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/poppins/poppins-regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400, normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/poppins/poppins-italic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 400, normal;
+}
+/* 
+    ====================
+          bold
+    ====================
+*/
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/poppins/poppins-bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 800, bold;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/poppins/poppins-bolditalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 800, bold;
+}
+/* 
+    ====================
+          light
+    ====================
+*/
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/poppins/poppins-light.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 100, lighter;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./assets/fonts/poppins/poppins-lightitalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 100, lighter;
+}
+/* 
+    ====================================
+    ======= FONT MONTSERRAT ============
+    ====================================
+*/
+/* 
+    ====================
+          regular
+    ====================
+*/
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/montserrat/montserrat-medium.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 400, normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/montserrat/montserrat-mediumitalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 400, normal;
+}
+/* 
+    ====================
+          bold
+    ====================
+*/
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/montserrat/montserrat-bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 800, bold;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/montserrat/montserrat-bolditalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 800, bold;
+}
+/* 
+    ====================
+          light
+    ====================
+*/
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/montserrat/montserrat-light.ttf) format("truetype");
+  font-style: normal;
+  font-weight: 100, lighter;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/montserrat/montserrat-lightitalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: 100, lighter;
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div.header {
+  width: 100vw;
+  height: 3rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.header a {
+  text-decoration: none;
+}
+div.header img {
+  max-height: 2.5rem;
+}
+
+h1 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1.56rem;
+  color: #fff;
+  margin: 0 0 2rem 0;
+}
+
+h2 {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 0 2rem 0;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  /* 
+      ====================================
+      ========== BACKGROUND ==============
+      ====================================
+  */
+  /*
+      =========================================================
+      ========================= FORM ==========================
+      =========================================================
+  */
+}
+body svg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+body div.positioning {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: calc(100vh - 3rem);
+  justify-content: center;
+  padding: 0 2rem;
+}
+body form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  height: 65vh;
+  /* 
+      ====================================
+      ===== DIV username & Password ======
+      ====================================
+  */
+  /* 
+      ====================================
+      ====== DIV Subtmit or sign up ======
+      ====================================
+  */
+}
+body form div:nth-of-type(1) {
+  width: 100%;
+  position: relative;
+  /* 
+      ====================
+          forgot password
+      ====================
+  */
+}
+body form div:nth-of-type(1) fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border: none;
+  margin: 0 0 1rem 0;
+}
+body form div:nth-of-type(1) fieldset label {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #fff;
+  margin: 0 0 0.2rem 0;
+}
+body form div:nth-of-type(1) fieldset input {
+  width: 100%;
+  height: 1.8rem;
+}
+body form div:nth-of-type(1) a.forgot {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  position: absolute;
+  right: 0;
+  color: #fff;
+}
+body form div:nth-of-type(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body form div:nth-of-type(2) input[type=submit] {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  border: none;
+  padding: 0.5rem 3rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+  background-color: #FFF194;
+}
+body form div:nth-of-type(2) p {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 0.8rem;
+}
+body form div:nth-of-type(2) p a {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #fff;
+  font-size: 0.8rem;
+}

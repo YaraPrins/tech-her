@@ -1,0 +1,26 @@
+{{> header}}
+{{> background}}
+
+<div class="positioning">
+    <h1>Log In</h1>
+    <form action="">
+        <div>
+                <fieldset>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                </fieldset>
+
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password">
+                </fieldset>
+
+                <a href="/forgot-password" class="forgot">I forgot my password</a>
+        </div>
+        <div>
+            <input type="submit" value="log in" name="login" id="login">
+            <p>or <a href="/signup">sign up</a></p>
+        </div>
+    </form>
+
+</div>

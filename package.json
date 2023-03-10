@@ -1,0 +1,27 @@
+{
+  "name": "techtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch-main": "sass --no-source-map --watch styles/home.scss public/css/home.css",
+    "sass-watch-login": "sass --no-source-map --watch styles/login.scss public/css/login.css",
+    "sass-watch-error": "sass --no-source-map --watch styles/error.scss public/css/error.css",
+    "nodemon": "nodemon server.js",
+    "testing": "npm-run-all -p sass-watch-main sass-watch-login sass-watch-error nodemon",
+    "run": "node server.js"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.58.3"
+  }
+}

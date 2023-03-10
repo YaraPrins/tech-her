@@ -1,0 +1,16 @@
+div.header {
+    width: 100vw;
+    height: 3rem;
+    background-color: $backgroundHeader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        max-height: 2.5rem;
+    }
+}
