@@ -9,7 +9,7 @@
     "sass-watch-error": "sass --no-source-map --watch styles/error.scss public/css/error.css",
     "nodemon": "nodemon server.js",
     "testing": "npm-run-all -p sass-watch-main sass-watch-login sass-watch-error nodemon",
-    "run": "node server.js"
+    "start": "node server.js"
 
   },
   "keywords": [],
