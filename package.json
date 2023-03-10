@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass-watch-main": "sass --no-source-map --watch styles/home.scss public/css/home.css",
+    "sass-watch-zero": "sass --no-source-map --watch styles/zero.scss public/css/zero.css",
     "sass-watch-login": "sass --no-source-map --watch styles/login.scss public/css/login.css",
     "sass-watch-error": "sass --no-source-map --watch styles/error.scss public/css/error.css",
+    "sass-watch-home": "sass --no-source-map --watch styles/home.scss public/css/home.css",
     "nodemon": "nodemon server.js",
-    "testing": "npm-run-all -p sass-watch-main sass-watch-login sass-watch-error nodemon",
+    "testing": "npm-run-all -p sass-watch-zero sass-watch-login sass-watch-error sass-watch-home nodemon",
     "start": "node server.js"
   },
   "keywords": [],
@@ -17,7 +18,8 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-handlebars": "^6.0.6"
+    "express-handlebars": "^6.0.6",
+    "mongodb": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",

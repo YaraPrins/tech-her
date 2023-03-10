@@ -1,14 +1,18 @@
 @import 'colors';
 @import 'fonts';
 @import 'reset-styling';
+@import 'header';
+@import 'headings';
 
 body {
     background-color: $background;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     height: 100vh;
+
+    /* 
+        ====================================
+        ========== BACKGROUND ==============
+        ====================================
+    */
 
     svg {
         position: fixed;
@@ -17,21 +21,12 @@ body {
         z-index: -1;
     }
 
-    img {
-        width: 75%;
-        max-width: 20rem;
-        position: relative;
-        top: 2rem;
-    }
-
-    a {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        padding: 0.5rem 3rem;
-        border: none;
-        background-color: $buttonColor;
-        color: $textBlack;
-        text-decoration: none;
-        font-size: 0.8rem;
+    div:nth-of-type(2) {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
     }
 }
-
