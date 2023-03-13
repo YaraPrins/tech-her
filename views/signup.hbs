@@ -2,24 +2,24 @@
 {{> background}}
 
 <div class="positioning">
-    <h1>Log In</h1>
-    <form action="">
+    <h1>Sign Up</h1>
+    <form action="./signup" method="POST">
         <div>
                 <fieldset>
                     <label for="username">Username</label>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" required>
                 </fieldset>
 
                 <fieldset>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password"  name="password" id="password" required>
                 </fieldset>
 
                 <a href="/forgot-password" class="forgot">I forgot my password</a>
         </div>
         <div>
-            <input type="submit" value="log in" name="login" id="login">
-            <p>or <a href="/signup">sign up</a></p>
+            <button type="submit">Sign Up</button>
+            <p>or <a href="/login">log in</a></p>
         </div>
     </form>
 

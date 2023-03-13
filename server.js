@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const expbs = require('express-handlebars');
+const slug = require('slug');
+const bodyParser = require('body-parser');
 //setting up & configure the .env module and file
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 8080;
@@ -45,6 +47,8 @@ const hbs = expbs.create({
 
     // create custom helpers
     helpers: {
+        //custom helper to capitalize the first letter of the word
+        //sources: https://www.samanthaming.com/pictorials/how-to-capitalize-a-string/ & https://youtu.be/2BoSBaWvFhM
         capitalize: function capitalize(str) {
             const lower = str.toLowerCase()
             return str.charAt(0).toUpperCase() + lower.slice(1);
@@ -77,31 +81,36 @@ app.get('/login', (req, res) => {
     });
 });
 
-app.get('/user/:user', (req, res) => {
-    res.render('home', {
-        title: `${req.params.user}`,
-        style: 'home.css'
+app.get('/signup', (req, res) => {
+    res.render('signup', {
+        title: 'Sign Up',
+        style: 'signup.css'
     });
 });
 
+app.post('/signup', async (req, res) => {
+    try {
+    let addUser = {
+            name: req.body.username,
+            password: req.body.password
+        }
+    await database.collection('users').insertOne(addUser)
+    } catch {
+    res.redirect('/')
+    }
+});
 
-// app.get('/signup', (req, res) => {
-//     res.render('sign-up', { title: 'Sign Up', layout: 'log-in'});
-//   });
-  
-//   app.post('/signup', async (req, res) => {
-//       try {
-//         let addUser = {
-//             name: req.body.username,
-//             password: req.body.password,
-//             email: req.body.email
-//           }
-//         await db.collection('users').insertOne(addUser)
-//       } catch {
-//         res.redirect('/signup')
-//       }
-//     res.render('log-in', { title: 'Sign Up', layout: 'log-in'});
-//   });
+// res.render('log-in', { title: 'Sign Up', layout: 'log-in'});
+// });
+
+// app.get('/user/:user', (req, res) => {
+//     res.render('home', {
+//         title: `${req.params.user}`,
+//         style: 'home.css'
+//     });
+// });
+
+
 
 
 
