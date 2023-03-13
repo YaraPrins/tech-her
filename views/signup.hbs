@@ -5,6 +5,12 @@
     <h1>Sign Up</h1>
     <form action="./signup" method="post">
         <div>
+
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input type="email"  name="email" id="email" required>
+                </fieldset>
+
                 <fieldset>
                     <label for="username">Username</label>
                     <input type="text" name="username" id="username" required>
@@ -12,10 +18,14 @@
 
                 <fieldset>
                     <label for="password">Password</label>
-                    <input type="password"  name="password" id="password" required>
+                    <input type="password"  name="password" id="password" minlength="8" required>
                 </fieldset>
 
-                <a href="/forgot-password" class="forgot">I forgot my password</a>
+                <fieldset>
+                    <label for="passwordrepeat">Repeat Password</label>
+                    <input type="password"  name="passwordrepeat" id="passwordrepeat" minlength="8" required>
+                </fieldset>
+
         </div>
         <div>
             <button type="submit">Sign Up</button>

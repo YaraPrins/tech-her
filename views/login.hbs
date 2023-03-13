@@ -3,7 +3,7 @@
 
 <div class="positioning">
     <h1>Log In</h1>
-    <form action="">
+    <form action="/login" method="post">
         <div>
                 <fieldset>
                     <label for="username">Username</label>
@@ -19,6 +19,7 @@
         </div>
         <div>
             <input type="submit" value="log in" name="login" id="login">
+            {{!-- <a href="/home/yara" class="login">Log In</a> --}}
             <p>or <a href="/signup">sign up</a></p>
         </div>
     </form>

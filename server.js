@@ -63,7 +63,7 @@ app.set('view engine', 'hbs');
 app.use(express.json());
 app.use(express.urlencoded());
 // sets public map to use your static files (css for example)
-app.use(express.static('public'));
+app.use(express.static('public/'));
 
 
 
@@ -76,6 +76,13 @@ app.get('/', (req, res) => {
         style: 'zero.css'
     });
 });
+
+app.get('/home/:userr', (req, res) => {
+    res.render('home', {
+        title: req.params.userr,
+        style: 'home.css'
+    })
+})
 
 app.get('/login', (req, res) => {
     res.render('login', {
@@ -94,6 +101,7 @@ app.get('/signup', (req, res) => {
 app.post('/signup', async (req, res) => {
     try {
         let addUser = {
+            email: req.body.email,
             username: req.body.username,
             password: req.body.password
         }
@@ -104,8 +112,10 @@ app.post('/signup', async (req, res) => {
             style: 'succes.css'
         })
         console.log('signup succesful')
-        console.log(req.body.username)
-        console.log(req.body.password)
+        console.log("email:" + " " + req.body.email)
+        console.log("username:" + " " + req.body.username)
+        console.log("password:" + " " + req.body.password)
+
     } catch {
         res.redirect('/')
         console.log('signup not succesful')
@@ -113,6 +123,38 @@ app.post('/signup', async (req, res) => {
         console.log(req.body.password)
     }
 });
+
+app.post('/login', async (req, res) => {
+
+    // partially made by me, partially from https://youtu.be/V8dYGNfHjfk
+    
+    try {
+        const check = await database.collection('users').findOne({username:req.body.username});       
+
+            if(check.password===req.body.password) {
+                res.render('home', {
+                    title: 'Home',
+                    user: req.body.username,
+                    style: 'home.css'
+                })
+                console.log('login succesful')
+            }
+            else {
+                res.send("wrong password")
+            }
+        
+    } catch {
+        res.send("wrong username and/or password")
+    }
+});
+
+
+
+
+
+
+
+
 
 
 

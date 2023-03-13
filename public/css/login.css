@@ -228,7 +228,7 @@ body form div:nth-of-type(2) {
   flex-direction: column;
   align-items: center;
 }
-body form div:nth-of-type(2) input[type=submit] {
+body form div:nth-of-type(2) a.login {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   border: none;
   padding: 0.5rem 3rem;

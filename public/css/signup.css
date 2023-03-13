@@ -180,9 +180,9 @@ body form {
   justify-content: space-between;
   height: 65vh;
   /* 
-      ====================================
-      ===== DIV username & Password ======
-      ====================================
+      ===========================================
+      ===== DIV email, username & Password ======
+      ===========================================
   */
   /* 
       ====================================
@@ -215,6 +215,27 @@ body form div:nth-of-type(1) fieldset input {
   width: 100%;
   height: 1.8rem;
 }
+body form div:nth-of-type(1) fieldset #email,
+body form div:nth-of-type(1) fieldset #username,
+body form div:nth-of-type(1) fieldset #password,
+body form div:nth-of-type(1) fieldset #passwordrepeat {
+  border: none;
+}
+body form div:nth-of-type(1) fieldset #email:valid,
+body form div:nth-of-type(1) fieldset #username:valid,
+body form div:nth-of-type(1) fieldset #password:valid,
+body form div:nth-of-type(1) fieldset #passwordrepeat:valid {
+  border: 2px solid #37ff4b;
+}
+body form div:nth-of-type(1) fieldset #email:active,
+body form div:nth-of-type(1) fieldset #username:active,
+body form div:nth-of-type(1) fieldset #password:active,
+body form div:nth-of-type(1) fieldset #passwordrepeat:active {
+  border: 2px solid #3769ff;
+}
+body form div:nth-of-type(1) fieldset .errorState {
+  border: 2px solid #ff3737;
+}
 body form div:nth-of-type(1) a.forgot {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
@@ -228,7 +249,7 @@ body form div:nth-of-type(2) {
   flex-direction: column;
   align-items: center;
 }
-body form div:nth-of-type(2) input[type=submit] {
+body form div:nth-of-type(2) button {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   border: none;
   padding: 0.5rem 3rem;

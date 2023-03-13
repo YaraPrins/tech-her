@@ -46,9 +46,9 @@ body {
 
 
 /* 
-    ====================================
-    ===== DIV username & Password ======
-    ====================================
+    ===========================================
+    ===== DIV email, username & Password ======
+    ===========================================
 */
 
         div:nth-of-type(1) {
@@ -71,6 +71,38 @@ body {
                 input {
                     width: 100%;
                     height: 1.8rem;
+                }
+
+                #email, 
+                #username,
+                #password,
+                #passwordrepeat {
+                    border: none;
+                }
+
+                #email:valid, 
+                #username:valid,
+                #password:valid,
+                #passwordrepeat:valid {
+                    border: 2px solid $validFormColor;
+                }
+
+                #email:active, 
+                #username:active,
+                #password:active,
+                #passwordrepeat:active {
+                    border: 2px solid $activeFormColor;
+                }
+
+                // #email:invalid, 
+                // #username:invalid,
+                // #password:invalid,
+                // #passwordrepeat:invalid {
+                //     border: 2px solid $invalidFormColor;
+                // }
+
+                .errorState {
+                    border: 2px solid $invalidFormColor;
                 }
             }
 
@@ -100,7 +132,7 @@ body {
             flex-direction: column;
             align-items: center;
     
-            input[type=submit] {
+            button {
                 font-family: 'Poppins', Arial, Helvetica, sans-serif;
                 border: none;
                 padding: 0.5rem 3rem;
