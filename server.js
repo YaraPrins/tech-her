@@ -8,10 +8,6 @@ const port = process.env.PORT || 8080;
 // required MongoDB | made object of the const so can use 'new' |
 const { MongoClient } = require('mongodb');
 
-
-app.use(express.json());
-app.use(express.urlencoded());
-
 //testing connection to the .env file
 // console.log(process.env.TEST);
 
@@ -62,6 +58,10 @@ const hbs = expbs.create({
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
 
+// makes sure you can use req.body for adding to database.
+// when removing the urlencoded part, sometime is added to the database, but the data is undefined.
+app.use(express.json());
+app.use(express.urlencoded());
 // sets public map to use your static files (css for example)
 app.use(express.static('public'));
 
@@ -113,19 +113,6 @@ app.post('/signup', async (req, res) => {
         console.log(req.body.password)
     }
 });
-
-// res.render('log-in', { title: 'Sign Up', layout: 'log-in'});
-// });
-
-// app.get('/user/:user', (req, res) => {
-//     res.render('home', {
-//         title: `${req.params.user}`,
-//         style: 'home.css'
-//     });
-// });
-
-
-
 
 
 
