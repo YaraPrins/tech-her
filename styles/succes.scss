@@ -1,0 +1,130 @@
+@import 'colors';
+@import 'fonts';
+@import 'reset-styling';
+@import 'header';
+@import 'headings';
+
+
+body {
+    background-color: $background;
+    height: 100vh;
+
+/* 
+    ====================================
+    ========== BACKGROUND ==============
+    ====================================
+*/
+
+    svg {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+/*
+    =========================================================
+    ========================= FORM ==========================
+    =========================================================
+*/
+
+    div.positioning {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: calc(100vh - 3rem);
+        justify-content: center;
+        padding: 0 2rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        height: 65vh;
+
+
+/* 
+    ====================================
+    ===== DIV username & Password ======
+    ====================================
+*/
+
+        div:nth-of-type(1) {
+            width: 100%;
+            position: relative;
+
+            fieldset {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                border: none;
+                margin: 0 0 1rem 0;
+    
+                label {
+                    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                    color: $textWhite;
+                    margin: 0 0 0.2rem 0;
+                }
+    
+                input {
+                    width: 100%;
+                    height: 1.8rem;
+                }
+            }
+
+/* 
+    ====================
+        forgot password
+    ====================
+*/
+
+            a.forgot {
+                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                font-size: 0.8rem;
+                position: absolute;
+                right: 0;
+                color: $textWhite;
+            }
+        }
+
+/* 
+    ====================================
+    ====== DIV Subtmit or sign up ======
+    ====================================
+*/
+        div:nth-of-type(2) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            input[type=submit] {
+                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                border: none;
+                padding: 0.5rem 3rem;
+                margin-bottom: 0.5rem;
+                color: $textBlack;
+                background-color: $buttonColor;
+        
+            }
+
+            p {
+                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                color: $textWhite;
+                font-size: 0.8rem;
+                
+                a {
+                    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                    color: $textWhite;
+                    font-size: 0.8rem;
+                }
+            }
+            
+        }
+    }
+
+
+}
+

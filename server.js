@@ -2,12 +2,15 @@ const express = require('express');
 const app = express();
 const expbs = require('express-handlebars');
 const slug = require('slug');
-const bodyParser = require('body-parser');
 //setting up & configure the .env module and file
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 8080;
 // required MongoDB | made object of the const so can use 'new' |
 const { MongoClient } = require('mongodb');
+
+
+app.use(express.json());
+app.use(express.urlencoded());
 
 //testing connection to the .env file
 // console.log(process.env.TEST);
@@ -90,13 +93,24 @@ app.get('/signup', (req, res) => {
 
 app.post('/signup', async (req, res) => {
     try {
-    let addUser = {
-            name: req.body.username,
+        let addUser = {
+            username: req.body.username,
             password: req.body.password
         }
-    await database.collection('users').insertOne(addUser)
+        await database.collection('users').insertOne(addUser);
+
+        res.render('signup-succesful', {
+            title: 'Sign Up Succesful',
+            style: 'succes.css'
+        })
+        console.log('signup succesful')
+        console.log(req.body.username)
+        console.log(req.body.password)
     } catch {
-    res.redirect('/')
+        res.redirect('/')
+        console.log('signup not succesful')
+        console.log(req.body.username)
+        console.log(req.body.password)
     }
 });
 

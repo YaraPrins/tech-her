@@ -9,15 +9,15 @@
     "sass-watch-signup": "sass --no-source-map --watch styles/signup.scss public/css/signup.css",
     "sass-watch-error": "sass --no-source-map --watch styles/error.scss public/css/error.css",
     "sass-watch-home": "sass --no-source-map --watch styles/home.scss public/css/home.css",
+    "sass-watch-succes": "sass --no-source-map --watch styles/succes.scss public/css/succes.css",
     "nodemon": "nodemon server.js",
-    "testing": "npm-run-all -p sass-watch-zero sass-watch-login sass-watch-signup sass-watch-error sass-watch-home nodemon",
+    "testing": "npm-run-all -p sass-watch-zero sass-watch-login sass-watch-signup sass-watch-succes sass-watch-error sass-watch-home nodemon",
     "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.6",
