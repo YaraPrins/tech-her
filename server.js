@@ -9,7 +9,7 @@ const port = process.env.PORT || 8080;
 const { MongoClient } = require('mongodb');
 
 //testing connection to the .env file
-// console.log(process.env.TEST);
+console.log(process.env.TEST);
 
 //Database Setup
 let database = null;
