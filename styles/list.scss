@@ -38,17 +38,34 @@ body {
         align-items: flex-start;
         height: calc(100vh - 6rem);
 
-        p {
-            color: white;
+        h1 {
+            margin: 1rem 0 0 0;
+        }
+    
+
+        h2 {
+            margin: 0 0 1.3rem 0;
         }
 
 
-        ul {
+        ul{
             list-style: none;
+            margin: 0.8rem 0;
+            border: 2px solid #fff;
+            width: 78vw;
+            padding: 0.4rem;
 
             li {
                 color: $textWhite;
+                font-family: $fontMontserrat;
+                margin: 0.3rem 0;
             }
+        }
+
+        .mainList {
+            margin: 0;
+            padding: 0;
+            border: none;
         }
     }
 }
