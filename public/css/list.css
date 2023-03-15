@@ -308,3 +308,9 @@ body div.homepage {
 body div.homepage p {
   color: white;
 }
+body div.homepage ul {
+  list-style: none;
+}
+body div.homepage ul li {
+  color: #fff;
+}

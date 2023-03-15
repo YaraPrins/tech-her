@@ -154,7 +154,20 @@ app.get('/list', (req, res) => {
     res.render('list', {
         title: 'Liked Songs',
         style: 'list.css',
-        // user: req.body.username
+        song: [
+            {
+                "name": "Paint It Black",
+                "album": "Aftermath",
+                "year": "1966", 
+                "artist": "AC/DC"
+            },
+            {
+                "name": "Bohemian Rhapsody",
+                "album": "A Night at the Opera",
+                "year": "1975", 
+                "artist": "Queen"
+            }
+        ]
     })
 })
 
@@ -162,7 +175,7 @@ app.get('/settings', (req, res) => {
     res.render('settings', {
         title: 'Settings',
         style: 'settings.css',
-        // user: req.body.username
+        
     })
 })
 

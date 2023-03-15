@@ -41,5 +41,14 @@ body {
         p {
             color: white;
         }
+
+
+        ul {
+            list-style: none;
+
+            li {
+                color: $textWhite;
+            }
+        }
     }
 }

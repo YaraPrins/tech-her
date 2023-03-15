@@ -5,7 +5,37 @@
     <h1>Hallo</h1>
     <h2>Here is the list of your liked songs</h2>
 
-    <p>this is a test</p>
+    <ul>
+        {{#each song}}
+        <li>
+            <ul>
+                {{#each this as |value key| }}
+                    <li>{{@value}}</li>
+                {{/each}}
+            </ul>
+        </li>
+        {{/each}}
+    </ul>
+    
+
+
+    {{!-- <ul>
+        <li>
+            <ul>
+                {{#each song}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </li>
+        <li>
+            <ul>
+                {{#each song}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </li>
+    </ul> --}}
+
 </div>
 
 {{> nav}}
