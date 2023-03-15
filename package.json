@@ -10,8 +10,10 @@
     "sass-watch-error": "sass --no-source-map --watch styles/error.scss public/css/error.css",
     "sass-watch-home": "sass --no-source-map --watch styles/home.scss public/css/home.css",
     "sass-watch-succes": "sass --no-source-map --watch styles/succes.scss public/css/succes.css",
+    "sass-watch-list": "sass --no-source-map --watch styles/list.scss public/css/list.css",
+    "sass-watch-settings": "sass --no-source-map --watch styles/settings.scss public/css/settings.css",
     "nodemon": "nodemon server.js",
-    "testing": "npm-run-all -p sass-watch-zero sass-watch-login sass-watch-signup sass-watch-succes sass-watch-error sass-watch-home nodemon",
+    "testing": "npm-run-all -p sass-watch-zero sass-watch-login sass-watch-signup sass-watch-list sass-watch-settings sass-watch-succes sass-watch-error sass-watch-home nodemon",
     "start": "node server.js"
   },
   "keywords": [],

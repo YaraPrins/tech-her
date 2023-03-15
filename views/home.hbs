@@ -1,5 +1,40 @@
 {{> header}}
 {{> background}}
 
-<h1>Hallo {{capitalize user}}</h1>
-<h2>Welcome to your for you page</h2>
+<div class="homepage">
+    <h1>Hallo {{capitalize user}}</h1>
+    <h2>Welcome to your for you page</h2>
+
+    <div class="matcherDiv">
+        <div class="songInfo">
+            <img class="songInfoImg" src="/assets/paint-it-black-stones.png" alt="">
+            <div class="songInfoText">
+                <h3>Paint It Black</h3>
+                <h4>Aftermath (1966)</h4>
+                <h4>The Rolling Stones</h4>
+            </div>
+        </div>
+
+        <div>
+            <button class="prev">
+                <svg class= "navIcon" xmlns="http://www.w3.org/2000/svg" width="25.178" height="19.469" viewBox="0 0 25.178 19.469">
+                    <path id="next" d="M4.045,25.8V7.955h.008A.821.821,0,0,1,4.87,7.21l.028,0H6.381c.023,0,.045-.007.069-.007a.824.824,0,0,1,.823.823.746.746,0,0,1-.012.111v7.513L18.086,9.4a.556.556,0,0,1,.948.381h0v4.953L28.269,9.4a.556.556,0,0,1,.948.381h0V24.079a.557.557,0,0,1-.957.389l-9.226-5.327v4.938a.557.557,0,0,1-.957.389L7.262,18.223v7.591h0c0,.013,0,.024,0,.037a.823.823,0,0,1-.822.823H4.863v-.008a.823.823,0,0,1-.823-.823c0-.015,0-.029,0-.043Z" transform="translate(-4.04 -7.205)" fill="#fff"/>
+                </svg>
+            </button>
+            <button class="playPause">
+                <svg class= "navIcon" xmlns="http://www.w3.org/2000/svg" width="43.616" height="43.616" viewBox="0 0 43.616 43.616">
+                    <path id="play-filled" d="M24.058,2.25A21.808,21.808,0,1,0,45.866,24.058,21.808,21.808,0,0,0,24.058,2.25ZM35.71,25.429,18.575,34.775A1.528,1.528,0,0,1,16.269,33.4V14.712a1.542,1.542,0,0,1,2.321-1.34l17.135,9.346a1.558,1.558,0,0,1,0,2.742Z" transform="translate(-2.25 -2.25)" fill="#fff"/>
+                </svg>
+            </button>
+            <button class="next">
+                <svg class= "navIcon" xmlns="http://www.w3.org/2000/svg" width="25.179" height="19.469" viewBox="0 0 25.179 19.469">
+                    <path id="next" d="M29.213,25.8V7.955h-.008a.821.821,0,0,0-.816-.746l-.028,0H26.878c-.023,0-.045-.007-.069-.007a.824.824,0,0,0-.823.823A.745.745,0,0,0,26,8.139v7.513L15.172,9.4a.556.556,0,0,0-.948.381h0v4.953L4.99,9.4a.556.556,0,0,0-.948.381h0V24.079A.557.557,0,0,0,5,24.468l9.226-5.327v4.938a.557.557,0,0,0,.957.389L26,18.223v7.591h0c0,.013,0,.024,0,.037a.823.823,0,0,0,.822.823H28.4v-.008a.823.823,0,0,0,.823-.823c0-.015,0-.029,0-.043Z" transform="translate(-4.04 -7.205)" fill="#fff"/>
+                </svg>
+            </button>
+        </div>
+
+        <button class="addToFavorites">add to favorites</button>
+    </div>
+</div>
+
+{{> nav}}

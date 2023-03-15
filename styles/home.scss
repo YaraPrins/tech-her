@@ -3,6 +3,7 @@
 @import 'reset-styling';
 @import 'header';
 @import 'headings';
+@import 'nav';
 
 body {
     background-color: $background;
@@ -14,7 +15,7 @@ body {
         ====================================
     */
 
-    svg {
+    svg:not(.navIcon)  {
         position: fixed;
         bottom: 0;
         right: 0;
@@ -28,5 +29,88 @@ body {
         justify-content: center;
         align-items: center;
         padding: 2rem;
+    }
+
+     /* 
+        =================================
+        ========== MATCHER ==============
+        =================================
+    */
+
+
+    div.homepage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: calc(100vh - 6rem);
+        overflow-x: hidden;
+        padding: 2rem 2rem 0 2rem;
+
+        h1, h2 {
+            margin: 0.5rem 0;
+        }
+
+        div.matcherDiv {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 2rem 0 0 0;
+
+            div.songInfo {
+                width: 14rem;
+                height: 18rem;
+                background-color: $accentYellowLight;
+    
+                Img {
+                    width: 100%;
+                }
+    
+                &Text {
+                    color: $textBlack;
+                    padding: 0.2rem 1rem;
+    
+                    h3 {
+                        font-size: 1.2rem;
+                    }
+    
+                    h4 {
+                        font-size: 0.8rem;
+                        padding: 0.2rem 0 0 0;
+                    }
+                }
+            }
+
+            div:nth-of-type(2) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 10.5rem;
+                height: 4rem;
+                padding: 0;
+                margin: 2rem 0 0 0;
+
+                button {
+                    border: none;
+                    background:none;
+                    cursor: pointer;
+
+                    svg {
+                        width: 3rem
+                    }
+                }
+            }
+
+            button.addToFavorites {
+                font-family: $fontPoppins;
+                font-size: 0.7rem;
+                color: $textBlack;
+                background-color: $buttonColor;
+                border: none;
+                padding: 0.5rem 1rem;
+                margin: 1.5rem 0 0 0;
+            }
+        }
     }
 }

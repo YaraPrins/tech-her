@@ -77,11 +77,12 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/home/:userr', (req, res) => {
+app.get('/home',  (req, res) => {     
     res.render('home', {
-        title: req.params.userr,
+        title: 'Home',
+        user: "user",
         style: 'home.css'
-    })
+    });
 })
 
 app.get('/login', (req, res) => {
@@ -132,23 +133,38 @@ app.post('/login', async (req, res) => {
         const check = await database.collection('users').findOne({username:req.body.username});       
 
             if(check.password===req.body.password) {
-                res.render('home', {
-                    title: 'Home',
-                    user: req.body.username,
-                    style: 'home.css'
-                })
+                    res.render('home', {
+                        title: 'Home',
+                        user: req.body.username,
+                        style: 'home.css'
+                    });
                 console.log('login succesful')
+                
             }
             else {
-                res.send("wrong password")
+                res.send('wrong password')
             }
         
     } catch {
-        res.send("wrong username and/or password")
+        res.send('wrong username and/or password')
     }
 });
 
+app.get('/list', (req, res) => {
+    res.render('list', {
+        title: 'Liked Songs',
+        style: 'list.css',
+        // user: req.body.username
+    })
+})
 
+app.get('/settings', (req, res) => {
+    res.render('settings', {
+        title: 'Settings',
+        style: 'settings.css',
+        // user: req.body.username
+    })
+})
 
 
 

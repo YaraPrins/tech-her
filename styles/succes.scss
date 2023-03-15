@@ -15,7 +15,7 @@ body {
     ====================================
 */
 
-    svg {
+    svg:not(.navIcon)  {
         position: fixed;
         bottom: 0;
         right: 0;
@@ -63,7 +63,7 @@ body {
                 margin: 0 0 1rem 0;
     
                 label {
-                    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                    font-family: $fontPoppins;
                     color: $textWhite;
                     margin: 0 0 0.2rem 0;
                 }
@@ -81,7 +81,7 @@ body {
 */
 
             a.forgot {
-                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                font-family: $fontPoppins;
                 font-size: 0.8rem;
                 position: absolute;
                 right: 0;
@@ -101,7 +101,7 @@ body {
             align-items: center;
     
             input[type=submit] {
-                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                font-family: $fontPoppins; 
                 border: none;
                 padding: 0.5rem 3rem;
                 margin-bottom: 0.5rem;
@@ -111,12 +111,12 @@ body {
             }
 
             p {
-                font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                font-family: $fontPoppins;
                 color: $textWhite;
                 font-size: 0.8rem;
                 
                 a {
-                    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+                    font-family: $fontPoppins;
                     color: $textWhite;
                     font-size: 0.8rem;
                 }

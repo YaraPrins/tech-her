@@ -10,7 +10,7 @@ body {
     align-items: center;
     height: 100vh;
 
-    svg {
+    svg:not(.navIcon) {
         position: fixed;
         bottom: 0;
         right: 0;
@@ -25,7 +25,7 @@ body {
     }
 
     a {
-        font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-family: $fontPoppins;
         padding: 0.5rem 3rem;
         border: none;
         background-color: $buttonColor;

@@ -1,0 +1,26 @@
+div.nav {
+    background-color: $backgroundNav;
+    height: 3rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+
+        // this was a test, need to figure out way to give nav icon color per page it is on
+        // li:nth-of-type(1) a svg {
+        //     fill: $iconHover;
+        // }
+
+        li:hover a svg {
+            fill: $iconHover;
+        }
+    }
+}

@@ -2,7 +2,17 @@ $background: #000;
 $buttonColor: #FFF194;
 $textBlack: #000;
 $backgroundHeader: #fff;
+$backgroundNav: #fff;
 $textWhite: #fff;
 $validFormColor: #37ff4b;
 $invalidFormColor: #ff3737;
 $activeFormColor: #3769ff;
+$iconHover: #A293FF;
+$accentYellow: #FFF7C5;
+$accentYellowLight: #FFF7C5;
+
+@import 'fonts';
+
+$fontPoppins: 'Poppins', Arial, Helvetica, sans-serif;
+$fontMontserrat: 'Montserrat', Arial, Helvetica, sans-serif;
+

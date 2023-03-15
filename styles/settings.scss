@@ -3,6 +3,7 @@
 @import 'reset-styling';
 @import 'header';
 @import 'headings';
+@import 'nav';
 
 body {
     background-color: $background;
@@ -28,5 +29,17 @@ body {
         justify-content: center;
         align-items: center;
         padding: 2rem;
+    }
+
+
+    div.homepage {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: calc(100vh - 6rem);
+
+        p {
+            color: white;
+        }
     }
 }
