@@ -109,7 +109,11 @@ body {
                 }
             }
 
-            fieldset.location {
+            fieldset:nth-of-type(5) {
+                margin: 0;
+            }
+
+            fieldset.coordinates {
                 display: flex;
                 flex-direction: row;
 
@@ -158,16 +162,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
-    
-            button {
-                font-family: $fontPoppins;
-                border: none;
-                padding: 0.5rem 3rem;
-                margin-bottom: 0.5rem;
-                color: $textBlack;
-                background-color: $buttonColor;
-        
-            }
+
 
             p {
                 font-family: $fontPoppins;
@@ -182,6 +177,15 @@ body {
             }
             
         }
+    }
+
+    button {
+        font-family: $fontPoppins;
+        border: none;
+        padding: 0.5rem 3rem;
+        margin-bottom: 0.5rem;
+        color: $textBlack;
+        background-color: $buttonColor;
     }
 
 

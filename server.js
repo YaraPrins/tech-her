@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const expbs = require('express-handlebars');
-const slug = require('slug');
 //setting up & configure the .env module and file
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 8080;
@@ -176,12 +175,34 @@ app.get('/list', (req, res) => {
     })
 })
 
-app.get('/settings', (req, res) => {
-    res.render('settings', {
-        title: 'Settings',
-        style: 'settings.css',
-        
-    })
+app.get('/settings', async (req, res) => { 
+    // werkt niet zoals ik wil helaas.
+    // Ik wil zodra een gebruiker drukt op de knop remove account, en vervolgens hun username in typt
+    // dat die gebruiker en de bijbehordende data verwijderd wordt van de database.
+
+    try {
+        const user = await database.collection('users').findOne({username:req.body.username});
+
+        res.render('settings', {
+            title: 'Settings',
+            style: 'settings.css',
+    
+            items: ['Edit Profile', 'Privacy and Data', 'Terms of Service']        
+        }) 
+
+        if(user) {
+            const btnRemove = document.getElementById('remove');
+
+            btnRemove.addEventListener('click',  () => {
+                database.collection('users').deleteOne({username:req.body.username})
+            })
+        }
+
+    } catch {
+        res.redirect('/')
+        console.log('signup not succesful')
+        console.log(req.body.username)
+    }
 })
 
 

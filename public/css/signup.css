@@ -349,17 +349,20 @@ body form div:nth-of-type(1) fieldset #passwordrepeat:focus {
   border: 2px solid #3769ff;
 }
 body form div:nth-of-type(1) fieldset .errorState {
-  border: 2px solid #ff3737;
+  border: 2px solid #e76363;
 }
-body form div:nth-of-type(1) fieldset.location {
+body form div:nth-of-type(1) fieldset:nth-of-type(5) {
+  margin: 0;
+}
+body form div:nth-of-type(1) fieldset.coordinates {
   display: flex;
   flex-direction: row;
 }
-body form div:nth-of-type(1) fieldset.location div:nth-child(1) {
+body form div:nth-of-type(1) fieldset.coordinates div:nth-child(1) {
   display: flex;
   flex-direction: column;
 }
-body form div:nth-of-type(1) fieldset.location div:nth-child(2) #long, body form div:nth-of-type(1) fieldset.location div:nth-child(2) #lat {
+body form div:nth-of-type(1) fieldset.coordinates div:nth-child(2) #long, body form div:nth-of-type(1) fieldset.coordinates div:nth-child(2) #lat {
   padding: 0 0.5rem;
 }
 body form div:nth-of-type(1) a.forgot {
@@ -375,14 +378,6 @@ body form div:nth-of-type(2) {
   flex-direction: column;
   align-items: center;
 }
-body form div:nth-of-type(2) button {
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
-  border: none;
-  padding: 0.5rem 3rem;
-  margin-bottom: 0.5rem;
-  color: #000;
-  background-color: #FFF194;
-}
 body form div:nth-of-type(2) p {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #fff;
@@ -392,4 +387,12 @@ body form div:nth-of-type(2) p a {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 0.8rem;
+}
+body button {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  border: none;
+  padding: 0.5rem 3rem;
+  margin-bottom: 0.5rem;
+  color: #000;
+  background-color: #FFF194;
 }

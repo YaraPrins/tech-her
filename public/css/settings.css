@@ -305,6 +305,74 @@ body div.homepage {
   align-items: flex-start;
   height: calc(100vh - 6rem);
 }
-body div.homepage p {
-  color: white;
+body div.homepage div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+body div.homepage div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style: none;
+  height: 38vh;
+  margin: 2rem 0 0 0;
+}
+body div.homepage div ul li {
+  border-bottom: 1px solid #fff;
+  padding: 0 0 1rem 0;
+  display: block;
+  width: 80vw;
+}
+body div.homepage div ul li a {
+  color: #fff;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+body div.homepage div div#removeAccountField.fieldsetNone {
+  display: none;
+}
+body div.homepage div div#removeAccountField {
+  display: flex;
+  border: 3px solid #e76363;
+  padding: 0.5rem 1rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 20vh;
+  width: 70vw;
+}
+body div.homepage div div#removeAccountField label {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #fff;
+  margin: 0 0 0.2rem 0;
+}
+body div.homepage div div#removeAccountField input {
+  width: 100%;
+  height: 1.8rem;
+}
+body div.homepage div div#removeAccountField input[type=submit] {
+  padding: 0;
+}
+body div.homepage div button,
+body div.homepage div input[type=submit] {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  border: none;
+  padding: 0.5rem 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  background-color: #e76363;
+  cursor: pointer;
+}
+body div.homepage div button {
+  display: block;
+}
+body div.homepage div button.none {
+  display: none;
+}
+body div.homepage div button:hover,
+body div.homepage div button:active,
+body div.homepage div button:focus {
+  background-color: #a53d3d;
 }
