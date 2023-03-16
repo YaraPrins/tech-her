@@ -104,7 +104,9 @@ app.post('/signup', async (req, res) => {
         let addUser = {
             email: req.body.email,
             username: req.body.username,
-            password: req.body.password
+            password: req.body.password,
+            latitudeCoordinates: req.body.latitude,
+            longitudeCoordinates: req.body.longitude
         }
         await database.collection('users').insertOne(addUser);
 
@@ -116,6 +118,9 @@ app.post('/signup', async (req, res) => {
         console.log("email:" + " " + req.body.email)
         console.log("username:" + " " + req.body.username)
         console.log("password:" + " " + req.body.password)
+        console.log("latitude coordinates:" + " " + req.body.latitude)
+        console.log("latitude coordinates:" + " " + req.body.longitude)
+
 
     } catch {
         res.redirect('/')

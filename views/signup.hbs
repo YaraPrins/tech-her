@@ -26,6 +26,19 @@
                     <input type="password"  name="passwordrepeat" id="passwordrepeat" minlength="8" required>
                 </fieldset>
 
+                <fieldset class="location">
+                    <div>
+                        <label for="location">latitude</label>
+                        <label for="location">longitude</label>
+                    </div>
+                    <div>
+                        <input type="text" name="latitude" id="lat">
+                        <input type="text" name="longitude" id="long">
+                    </div>
+
+                    {{!-- <p>Location not available — JavaScript turned off</p> --}}
+                </fieldset>
+
         </div>
         <div>
             <button type="submit">Sign Up</button>

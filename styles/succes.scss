@@ -28,103 +28,19 @@ body {
     =========================================================
 */
 
-    div.positioning {
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        height: calc(100vh - 3rem);
-        justify-content: center;
-        padding: 0 2rem;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: space-between;
-        height: 65vh;
-
-
-/* 
-    ====================================
-    ===== DIV username & Password ======
-    ====================================
-*/
-
-        div:nth-of-type(1) {
-            width: 100%;
-            position: relative;
-
-            fieldset {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                border: none;
-                margin: 0 0 1rem 0;
-    
-                label {
-                    font-family: $fontPoppins;
-                    color: $textWhite;
-                    margin: 0 0 0.2rem 0;
-                }
-    
-                input {
-                    width: 100%;
-                    height: 1.8rem;
-                }
-            }
-
-/* 
-    ====================
-        forgot password
-    ====================
-*/
-
-            a.forgot {
-                font-family: $fontPoppins;
-                font-size: 0.8rem;
-                position: absolute;
-                right: 0;
-                color: $textWhite;
-            }
-        }
-
-/* 
-    ====================================
-    ====== DIV Subtmit or sign up ======
-    ====================================
-*/
-        div:nth-of-type(2) {
-            width: 100%;
+        div.positioning {
             display: flex;
             flex-direction: column;
-            align-items: center;
-    
-            input[type=submit] {
-                font-family: $fontPoppins; 
-                border: none;
-                padding: 0.5rem 3rem;
-                margin-bottom: 0.5rem;
-                color: $textBlack;
-                background-color: $buttonColor;
-        
-            }
+            width: 100vw;
+            height: calc(100vh - 3rem);
+            justify-content: center;
+            padding: 0 2rem;
 
-            p {
-                font-family: $fontPoppins;
+            a.login {
                 color: $textWhite;
-                font-size: 0.8rem;
-                
-                a {
-                    font-family: $fontPoppins;
-                    color: $textWhite;
-                    font-size: 0.8rem;
-                }
+                margin: 0 0.5rem;
             }
-            
+
         }
+
     }
-
-
-}
-
