@@ -10,7 +10,10 @@ const { MongoClient } = require('mongodb');
 //testing connection to the .env file
 console.log(process.env.TEST);
 
-//Database Setup
+
+// ==================================
+// ========= Databse Setup ==========
+// ==================================
 let database = null;
 
 // function connectDB
@@ -38,7 +41,10 @@ connectDB()
     });
 
 
-//default settings | setting up handlebars
+// =============================================================
+// ========= default settings | setting up handlebars ==========
+// =============================================================
+
 const hbs = expbs.create({
     defaultLayout: 'main',
     extname: 'hbs',
@@ -67,8 +73,10 @@ app.use(express.static('public/'));
 
 
 
+// ============================
+// ========= routing ========== 
+// ============================
 
-// routing
 app.get('/', (req, res) => {
     res.render('index', {
         title: 'Home',
@@ -208,11 +216,9 @@ app.get('/settings', async (req, res) => {
 
 
 
-
-
-
-
-
+// ==============================
+// ========= 404 & 500 ========== 
+// ==============================
 
 // ERROR 404
 app.use(function (req, res, next) {
@@ -235,7 +241,10 @@ app.use((err, req, res, next) => {
     });
 });
   
-  
+
+// =================================
+// ========= Starting App ========== 
+// =================================
   
 //start app
 app.listen(8080, () => {
