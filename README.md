@@ -9,7 +9,7 @@ When using this application you should have basic knowledge of `NodeJS` and `Mon
 1. download a zip of the code or fork the repository
 2. Open the folder in your preferred code editor and open your terminal. 
 3. In your terminal, run the command `npm install` to install all missing packages and modules needed in this application.
-4. When the installation of the dependencies have finished, you should make a connection to your database (see `Setting Up Database and Needed Files`). 
+4. When the installation of the dependencies have finished, you should make a connection to your database (see [`Setting Up Database and Needed Files`](https://github.com/YaraPrins/tech-her/blob/main/README.md#setting-up-database-and-needed-files)). 
 5. After making and connecting your database, run the command `npm start` to run the script `start` from the `package.json` file. This will start up the server.
 6. Go in your web browser to the given localhost and port (in the terminal in will be stated where to go).
 7. Enjoy the application 
