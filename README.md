@@ -42,7 +42,7 @@ In the app, you can connect with your friends (whome also use the app), and you 
 
 When using this application you should have basic knowledge of `NodeJS` and `MongoDB`. You need to have a code editor (I'm currently using VS Code). With NodeJS you will need to use npm commands to install the dependencies for the package and to run the application. You will also need to have your own [MongoDB account](https://www.mongodb.com/), and your own database called "users" and a collection inside the database also called "users". 
 
-## running the application
+## Running The Application
 
 1. download a zip of the code or fork the repository
 2. Open the folder in your preferred code editor and open your terminal. 
